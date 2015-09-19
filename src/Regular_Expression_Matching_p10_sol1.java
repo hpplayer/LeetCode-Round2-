@@ -64,6 +64,10 @@ public class Regular_Expression_Matching_p10_sol1 {
                     //if they match, then we check the previous result of using this * to match previous char in
                     //string s. Be careful, here we mean the result of matching substring of [0, i-1] with pattern
                     //of [0, j]. So it is not enough not to only compare a single pair of char
+                    //example: a*..... 
+                    //        aa .....
+                    //we firstly compare the preceding "a" with current char a, and make sure we can use * to match
+                    //more preceding element. So we will check dp[i-1][j], which is the result of matching * with s[0,i-1]
                     boolean multOccur = i > 0  && ((p.charAt(j-2) == s.charAt(i-1) || p.charAt(j-2) == '.') && dp[i-1][j]);
                     dp[i][j] = zeroOccur || multOccur;
                 }
