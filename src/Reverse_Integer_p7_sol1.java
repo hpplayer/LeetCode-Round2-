@@ -1,3 +1,11 @@
+/*
+Reverse digits of an integer.
+
+Example1: x = 123, return 321
+Example2: x = -123, return -321
+
+ */
+
 /**
  * Math + boundary check problem.
  * 
@@ -23,6 +31,7 @@ public class Reverse_Integer_p7_sol1 {
             //then no matter what the digit is, our final result will be overflow
             //if front part == int_max/10, then the input part must start with 1 otherwise we will have overflow
             //in input already like reverse(2 463847412) = 214748364 2, but the input already overflow 
+        	//Int_max = 2147483647
             if(Math.abs(result) > Integer.MAX_VALUE/10) return 0;
             result = result * 10 + x%10;
             x /= 10;
