@@ -15,7 +15,7 @@ Could you do it in-place with O(1) extra space?
 */
 
 /**
- * Array problem.
+ * Array Rotate problem.
  * 
  * Rotation is a classic problem in array. There are several famous solutions to do it. The difficulty is to get know those approachs
  * Sol1 provides a The Reversal Algorithm, 

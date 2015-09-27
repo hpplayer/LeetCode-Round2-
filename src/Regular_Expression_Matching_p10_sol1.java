@@ -1,3 +1,28 @@
+import java.util.Arrays;
+
+/*
+Regular Expression Matching
+
+Implement regular expression matching with support for '.' and '*'.
+
+'.' Matches any single character.
+'*' Matches zero or more of the preceding element.
+
+The matching should cover the entire input string (not partial).
+
+The function prototype should be:
+bool isMatch(const char *s, const char *p)
+
+Some examples:
+isMatch("aa","a") ¡ú false
+isMatch("aa","aa") ¡ú true
+isMatch("aaa","aa") ¡ú false
+isMatch("aa", "a*") ¡ú true
+isMatch("aa", ".*") ¡ú true
+isMatch("ab", ".*") ¡ú true
+isMatch("aab", "c*a*b") ¡ú true
+*/
+
 /**
  * Solution1 : a pure DP approach
  * Even this is the second time I am doing this problem, I still think it is very hard.
@@ -18,12 +43,16 @@
  * 
  * 
  * Finally, we just need to return the last cell in matrix, which tells the matching result of whole pattern with string 
+ * 
+ * Remark:
+ * This problem is very similar to problem Wildcard Matching(p44), we can treat them as a combo practice
+ * 
  * @author hpPlayer
  * @date Sep 18, 2015 5:21:30 PM
  */
 public class Regular_Expression_Matching_p10_sol1 {
 	public static void main(String[] args){
-		System.out.println(new Regular_Expression_Matching_p10_sol1().isMatch("abcbcd", "a.*c.*d"));
+		System.out.println(new Regular_Expression_Matching_p10_sol1().isMatch("", "."));
 	}
 	
     public boolean isMatch(String s, String p) {
@@ -68,6 +97,12 @@ public class Regular_Expression_Matching_p10_sol1 {
                     //        aa .....
                     //we firstly compare the preceding "a" with current char a, and make sure we can use * to match
                     //more preceding element. So we will check dp[i-1][j], which is the result of matching * with s[0,i-1]
+                    
+                    //why we look up the cell above it? because that cell contains the maximum possibility of matching previous chars
+                    //In previous char, we can match without using *, then this cell will get true value, if we must use * to match
+                    //then we will get true value too as we used the "*".
+                    //So we look up the cell above it and that cell will tell whether previous parts could match by considering the case 
+                    //of using and not using *
                     boolean multOccur = i > 0  && ((p.charAt(j-2) == s.charAt(i-1) || p.charAt(j-2) == '.') && dp[i-1][j]);
                     dp[i][j] = zeroOccur || multOccur;
                 }

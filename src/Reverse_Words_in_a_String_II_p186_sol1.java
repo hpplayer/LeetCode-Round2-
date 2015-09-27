@@ -25,6 +25,7 @@ Could you do it in-place without allocating extra space?
  * After wo rotate each bit, we can just rotate whole array and get result
  * 
  * So for those array rotating problem, we can divide the array into several parts, then rotate those parts, then rotate the whole array.
+ * notice: we have official solution for this problem
  * 
  * @author hpPlayer
  * @date Sep 26, 2015 12:22:30 AM
