@@ -33,6 +33,8 @@ public class _3Sum_p15 {
 	                    
 	                    //we may have a bunch of (start, end) that can reach target, so we will continue search
 	                    //Skip current start and end
+	                    
+	                    //need move start and end, to avoid outOfboundary error in following two while loops
 	                    start ++;
 	                    end --;
 	                    
