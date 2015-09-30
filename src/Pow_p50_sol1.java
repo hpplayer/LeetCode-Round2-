@@ -1,3 +1,9 @@
+/*
+Pow(x, n)
+
+Implement pow(x, n).
+*/
+
 /**
  * Math problem + divide and conquer.
  * To avoid repeat calculation, we will let the power goes like n->n/2->n/4

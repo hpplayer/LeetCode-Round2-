@@ -24,6 +24,11 @@ Find the median of the two sorted arrays. The overall run time complexity should
  * Remark:
  * Our array is fixed, but we will shrink our search range in the array, so we need two extra pointers to indicate the new start 
  * of search range, which are start1 and start2 respectively
+ * 
+ * Sol1 uses divide-and-conquer approach, each time we found half elements, thus shrink our search range by half
+ * Sol2 uses binary-search approach, each time we will use mid to update the search range, it also shrink the search range by 
+ * half in each loop
+ * So both solutions run in O(log(N+M)) time
  * @author hpPlayer
  * @date Sep 28, 2015 4:21:10 PM
  */

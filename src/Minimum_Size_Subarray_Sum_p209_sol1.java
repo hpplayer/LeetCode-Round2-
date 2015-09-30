@@ -1,3 +1,17 @@
+/*
+Minimum Size Subarray Sum
+
+Given an array of n positive integers and a positive integer s, find the minimal length of a subarray of which the sum ¡Ý s. If there isn't one, return 0 instead.
+
+For example, given the array [2,3,1,2,4,3] and s = 7,
+the subarray [4,3] has the minimal length under the problem constraint.
+
+click to show more practice.
+
+More practice:
+If you have figured out the O(n) solution, try coding another solution of which the time complexity is O(n log n).
+*/
+
 /**
  * a classic two pointer problem, or we can call it sliding window problem.
  * We will move end pointer until the current cumulative sum >= target, then we will start move start pointer and try to shrink the window size
