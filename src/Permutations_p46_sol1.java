@@ -21,6 +21,8 @@ For example,
  * Then we insert the third num, we can insert in head, mid or tail.
  * We will repeat above steps until all nums are inserted.
  * 
+ * Remark:
+ * problem Permutations II(p47) and problem Combinations (p77) use the similar BFS solution, check it out!
  * 
  * @author hpPlayer
  * @date Oct 2, 2015 7:46:57 PM

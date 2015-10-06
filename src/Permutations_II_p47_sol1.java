@@ -29,6 +29,9 @@ For example,
  * duplicate. To improve the speed, we will only do that if we find current num has duplicate. So we need sort the array first, then check the prev num
  * before current num, then decide whether to execute the helper function. The remaining parts are very similar to p46.
  * 
+ * Remark:
+ * problem Permutations(p46) and problem Combinations (p77) use the similar BFS solution, check it out!
+ * 
  * @author hpPlayer
  * @date Oct 2, 2015 8:46:47 PM
  */

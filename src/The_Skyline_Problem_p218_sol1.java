@@ -84,7 +84,10 @@ import java.util.*;
  * The time complexity should be similar to Merge sort, which is nLog(n)
  * 
  * Sol1 uses mergeSort solution
- * Sol2 uses max-heap solution
+ * Sol2 uses max-heap solution. 
+ * Sol2 is more like a global view that we have all building's information at current index, so we can 
+ * simply use height and edges to compose key points. While sol1 is like a local view, we always build perfect key poitns for
+ * local buildings, so we need set each building's right edge to 0, to indicate the skyline termination.
  * 
  * Sol1 is faster and cleaner, so sol1 is recommended
  * in my round 1 solution, I also provide a optimized sol2 solution, but it is too complicated so I did not put it here
