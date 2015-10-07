@@ -28,6 +28,8 @@ If the correct value is out of the range of representable values, INT_MAX (21474
 /**
  * String problem and maybe need some observations
  * 
+ * It is very similar to problem Valid Number (p65)
+ * 
  * First, let me explain what the problem want us to do. The chars in given string are unknown. The problem wants us
  * to catch the first integer that does not contain non-digit char inside it, and the char before it can only be "+" or
  * "-" or " +". The searching of integer stops when we found a non-digit char or we reach the tail
