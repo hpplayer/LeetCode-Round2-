@@ -40,7 +40,8 @@ You may assume both s and t have the same length.
  * Sol1 provides a hashMap solution that uses char value as key and value
  * Sol2 provides a hashMap solution that uses char value as key but index as value
  * 
- * for me I think 2 is better since we will not mix initial value with char value in the cell, also sol2 is shorter
+ * for me I think sol2 is better since we will not mix initial value with char value in the cell, also sol2 is shorter
+ * We have another problem Word Pattern (p290) that can be solved with a similar solution. That problem also needs a one-to-one relationship
  * 
  * @author hpPlayer
  * @date Oct 6, 2015 11:10:13 PM

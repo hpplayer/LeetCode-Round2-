@@ -27,7 +27,8 @@
  * DP solution
  * 
  * for each index, we need the info of its left and right, so it is very similar to problem candy (p135), where we need to scan the array
- * forward and backward before we can calculate the result on each index.
+ * forward and backward before we can calculate the result on each index. Similar solution can also be found in problem Maximal Rectangle
+ * (p85) where we still need to scan array (each row) forward and backward before we can get the width of rectangles
  * 
  * Here we use two tables to record the info of left and right specifically. After that, we can simply calculate the water on each index
  * by looking up the left info before it and right info after it. Obviously, the info means the height of bar. We can only trap water on

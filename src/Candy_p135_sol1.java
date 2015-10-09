@@ -31,6 +31,8 @@ What is the minimum candies you must give?
  * 
  * 
  * The problem can also be solved by two-pass algorithm, but it is trivial, so I did not list it here
+ * Two-pass algorithm can also be found in problem Trapping rain water(p42) sol1 and problem Maximal Rectangle (p85).
+ * 
  * @author hpPlayer
  * @date Sep 25, 2015 4:43:33 PM
  */

@@ -18,7 +18,9 @@ import java.util.Arrays;
  * 
  * Remark:
  * 
- * I can combine three loops into one (left, right, height), but I prefer leave it as it is to make the code more understandable
+ * 1) I can combine three loops into one (left, right, height), but I prefer leave it as it is to make the code more understandable
+ * 2) The similar idea that scan the array twice (forward and backward) to decide the range can also be found in problem Candy (p135)
+ * and problem Trapping rain water(p42)
  * 
  * @author hpPlayer
  * @date Oct 8, 2015 12:16:05 AM
