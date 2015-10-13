@@ -30,8 +30,8 @@ return [1,6],[8,10],[15,18].
  * mergeSort() is the main function, which firstly recursively split the input list into halve, then merge the list from each split part
  * 
  * Remark:
- * There is another great problem can be solved by MergeSort: problem The Skyline Problem (p218) check this out
- * 
+ * 1. There is another great problem can be solved by MergeSort: problem The Skyline Problem (p218) check this out
+ * 2. problem Meeting Romms (p253) is very similar to this problem
  * @author hpPlayer
  * @date Oct 4, 2015 3:05:56 PM
  */
