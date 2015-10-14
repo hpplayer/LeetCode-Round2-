@@ -31,10 +31,10 @@ return false.
  * @date Oct 13, 2015 2:29:36 PM
  */
 
-public class Meeting_Rooms_p253_sol1 {
+public class Meeting_Rooms_p252_sol1 {
 	public static void main(String[] args){
 		Interval[] intervals = {new Interval(0, 30), new Interval(5, 10), new Interval(15, 20)};
-		System.out.println(new Meeting_Rooms_p253_sol1().canAttendMeetings(intervals));
+		System.out.println(new Meeting_Rooms_p252_sol1().canAttendMeetings(intervals));
 	}
     public boolean canAttendMeetings(Interval[] intervals) {
         Arrays.sort(intervals, new Comparator<Interval>(){

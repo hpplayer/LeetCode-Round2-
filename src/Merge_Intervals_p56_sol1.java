@@ -31,7 +31,7 @@ return [1,6],[8,10],[15,18].
  * 
  * Remark:
  * 1. There is another great problem can be solved by MergeSort: problem The Skyline Problem (p218) check this out
- * 2. problem Meeting Romms (p253) is very similar to this problem
+ * 2. problem Meeting Romms (p252) is very similar to this problem
  * @author hpPlayer
  * @date Oct 4, 2015 3:05:56 PM
  */
