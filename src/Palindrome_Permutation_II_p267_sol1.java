@@ -40,6 +40,9 @@ To generate all distinct permutations of a (half of) string, use a similar appro
  * 
  * If more smart iterative solution come up, I will update it accordingly
  * 
+ * This problem is similar to problem Strobogrammatic Number II (p247) where we will build the string from two sides, and attach two
+ * chars on two sides in each recursion.
+ * 
  * @author hpPlayer
  * @date Oct 3, 2015 4:25:10 PM
  */
