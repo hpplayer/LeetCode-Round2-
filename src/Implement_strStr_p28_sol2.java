@@ -1,3 +1,5 @@
+import java.util.*;
+
 /**
  * KMP algorithm!
  * 
@@ -33,6 +35,7 @@
  */
 public class Implement_strStr_p28_sol2 {
 	public static void main(String[] args){
+		System.out.println(Arrays.toString( buildTable("aac#aaaa")));
 		System.out.println(new Implement_strStr_p28_sol2().strStr("mississippi", "issip"));// "babba", "bbb"
 	}
     public int strStr(String haystack, String needle) {
@@ -59,7 +62,7 @@ public class Implement_strStr_p28_sol2 {
         return -1;
     }
     
-    public int[] buildTable(String s){
+    public static int[] buildTable(String s){
         //Partial Match Table
         int[] result = new int[s.length()];
         
