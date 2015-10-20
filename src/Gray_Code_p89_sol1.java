@@ -41,8 +41,13 @@ For now, the judge is able to judge based on one instance of gray code sequence.
  * 
  * We found each seg part above can be got from read previous result backward, then add 1 in front
  * 
- * So we just use a list, add 0 to it as inital case, then loops it for n times.
+ * So we just use a list, add 0 to it as initial case, then loops it for n times.
  * In each loop, we will record the size of previous result, and read each previous result backward, then set 1 in front use (x|<<1) operation
+ * 
+ * Remark:
+ * We can easily convert this solution to recursive version. But it is trivial, so I did not list it here. During the conversion, be careful about 
+ * left shift operation, we need to shift leftward by n - 1 times, not n. Like what we did it iterative version. we loop from 0 to n-1, each time we 
+ * left shift by n-1 as well.
  * 
  * @author hpPlayer
  * @date Oct 20, 2015 12:48:37 PM
