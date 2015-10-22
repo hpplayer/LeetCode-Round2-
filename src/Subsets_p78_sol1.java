@@ -18,7 +18,7 @@ import java.util.*;
 
 public class Subsets_p78_sol1 {
 	public static void main(String[] args){
-		int[] nums = {1,2,3};//{1,2,3,4,5,6,7,8,10,0}
+		int[] nums = {1,2};//{1,2,3,4,5,6,7,8,10,0}
 		for(List<Integer> list : new Subsets_p78_sol1().subsets(nums)){
 			System.out.println(list);
 		}
@@ -35,9 +35,9 @@ public class Subsets_p78_sol1 {
     
     public void DFS(List<Integer> temp, List<List<Integer>> result, int index, int[] nums){
         for(int i = index; i< nums.length; i++){
-            temp.add(nums[index]);
+            temp.add(nums[i]);
             result.add(new ArrayList<Integer>(temp));
-            DFS(temp,  result, index + 1, nums);//search all subsets start with nums[index]
+            DFS(temp,  result, i + 1, nums);//search all subsets start with nums[index]
             temp.remove(temp.size()-1);//lets next num become the start of subsets
         }
     }

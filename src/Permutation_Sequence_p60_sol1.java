@@ -65,9 +65,9 @@ public class Permutation_Sequence_p60_sol1 {
             //insert digit forward
             sb.append(seq.get(index));
             
-            //since we will not have duplicates in permutation, we wil remove curretn digit out
+            //since we will not have duplicates in permutation, we will remove current digit out
             //and this is also correct for math, since after remove i, i + 1 becomes the smallest 
-            //number after i - 1, so if later we need the ith number again, it should use th new ith
+            //number after i - 1, so if later we need the ith number again, it should use the new ith
             //number which is old (i+1)th
             seq.remove(index);
         }
