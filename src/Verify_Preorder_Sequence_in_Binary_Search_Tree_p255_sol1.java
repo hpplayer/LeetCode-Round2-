@@ -44,6 +44,10 @@ Could you do it using only constant space complexity?
  * Sol1 provides a stack solution
  * Sol2 provides a similar solution but using the array itself instead of stack
  * 
+ * Another tree and array problem can be found in problem Construct Binary Tree from Preorder and Inorder Traversal (p105)
+ * problem Construct Binary Tree from Inorder and Postorder Traversal (p106) (I did not include in this solution set)
+ * and problem Convert Sorted Array to Binary Search Tree (p108)
+ * 
  * @author hpPlayer
  * @date Oct 13, 2015 11:34:09 PM
  */
