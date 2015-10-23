@@ -5,6 +5,12 @@ import java.util.*;
  * 
  * The tricky part is to observe that first nodes following root node are always nodes in leftmost path, if we have left tree.
  * 
+ * In this solution, we will mainly focus on "path" instead of "subtree". We always follow the leftmost path, so each next node will be left
+ * child of parent node. This information can be got from preorder[] as a number of nodes following root are in leftmost path. After we reach
+ * the leftmost node, we will return back, and look at nodes in other paths. Such information can be found in inorder[], which tells us which
+ * node in leftmost paths has right subtrees. But as in sol1, inorder[] here can just tells whether a node has subtrees (when connected with
+ * preorder[]) and how large the subtree is. But to get the correct next node in tree building, we still need to look at preorder[].
+ * 
  * So we firstly follow nodes in preorder to add all nodes in leftmost path. Each next node will be treated as the left child of last node. 
  * inorder[] can tell us which is the leftmost node in leftmost path. After we reach that node, we will return back. Obviously we need a container
  * to store nodes that we have visited. In this solution, we pick stack. Now inorder[] can tell us which nodes in right paths that have not been
