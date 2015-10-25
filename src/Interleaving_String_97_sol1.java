@@ -30,7 +30,7 @@ When s3 = "aadbbbaccc", return false.
  * 1) we need set dp[0][0] = true, which means we use empty char in s1/s2 to match empty in s3. Obviously, it is a matched pair.
  * 2) We can reduce the space complexity to O(m) or O(n) by repeatedly using one array. But then the code will be more complicated, so for clearness
  * I still use matrix[][] here.
- * 3) Don't forget to check len(s1) + len(s2) == len(s3), otherwise we may get in correct cases (s3 too short or too long)!!!!!!!!!!!!!
+ * 3) Don't forget to check len(s1) + len(s2) == len(s3), otherwise we may get incorrect cases (s3 too short or too long)!!!!!!!!!!!!!
  * 
  * This problem can also be solved by backtracking + memorization, which can be seen from sol2
  * In sol2 we will return false as long as match cannot continue, so it is supposed to stop faster than DP. But we may involve duplicate
