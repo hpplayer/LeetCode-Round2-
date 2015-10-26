@@ -28,6 +28,12 @@ If there are multiple such windows, you are guaranteed that there will always be
  * or points to a char appeared in s but with extra occurrence, we can safely move left pointer forward. The win size can be calculated by 
  * right bound - left bound + 1. Finally we will find the min bound and return the minWin accordingly.
  * 
+ * Remark:
+ * This problem is similar to problem:
+ *  Longest_Substring_Without_Repeating_Characters_p3_sol1,
+ *  Substring_with_Concatenation_of_All_Words_p30_sol1
+ *  Longest_Substring_with_At_Most_Two_Distinct_Characters_p159_sol1
+ *  
  * @author hpPlayer
  * @date Sep 19, 2015 3:18:34 PM
  */

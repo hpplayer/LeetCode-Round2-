@@ -11,6 +11,13 @@ import java.util.Arrays;
  * So it is necessary to use Arrays.fill() to fill the initial value to -1, which will be differed from index 0
  * 
  * We have official solution in the pdf
+ * 
+ * Remark:
+ * This problem is similar to problem:
+ *  Substring_with_Concatenation_of_All_Words_p30_sol1
+ *  Longest_Substring_with_At_Most_Two_Distinct_Characters_p159_sol1
+ *  Minimum_Window_Substring_p76_sol1
+ *  
  * @author hpPlayer
  * @date Sep 22, 2015 1:50:26 PM
  */

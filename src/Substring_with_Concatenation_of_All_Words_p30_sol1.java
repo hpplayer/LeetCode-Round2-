@@ -40,6 +40,12 @@ You should return the indices: [0,9].
  * one word to start the search for new window
  * 
  * Time complexity is O(len(word) * len(s) / Len(word)) = O(len(s))
+ * 
+ * This problem is similar to problem:
+ *  Longest_Substring_Without_Repeating_Characters_p3_sol1,
+ *  Minimum_Window_Substring_p76_sol1
+ *  Longest_Substring_with_At_Most_Two_Distinct_Characters_p159_sol1
+ *  
  * @author hpPlayer
  * @date Sep 29, 2015 2:46:14 PM
  */

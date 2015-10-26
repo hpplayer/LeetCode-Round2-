@@ -25,6 +25,8 @@ For this problem, a height-balanced binary tree is defined as a binary tree in w
  * 
  * I put this solution here as a pratice of post-order tree traversal
  * 
+ * Remark:
+ * This way I used to travere the tree can also be applied to problem Binary Tree Maximum Path Sum(p124)
  * @author hpPlayer
  * @date Sep 27, 2015 11:43:04 PM
  */
