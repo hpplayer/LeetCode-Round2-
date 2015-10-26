@@ -13,6 +13,9 @@
  * us if the substring from i+1 to j -1 is palindrome. As long as we found a new palindrome, we will update our result, as the length
  * is ascending, the new palindrome should always be the longer one
  * 
+ * Remark:
+ * The way we used to build DP table can also be used in problem Palindrome Partitioning (p131)
+ * 
  * @author hpPlayer
  * @date Sep 23, 2015 11:13:22 PM
  */
