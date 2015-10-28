@@ -116,7 +116,7 @@ import java.util.Arrays;
  * The tricky part is to solve this problem efficiently. To achieve that, we have to be familiar with an algorithm called Sieve of Eratosthenes
  * 
  * There is no equation to calculate number of primes smaller than a target number. We have to produce all prime numbers and count them one by one.
- * But there are several good method to filter non-prime number and keep prime number.
+ * But there are several good methods to filter non-prime number and keep prime number.
  * 
  * Our basic idea is to get the multiples of each primes smaller than n. Each reachable number will be not primes. We use a boolean table to record the status
  * of all numbers < n. Set the value to be false, if it is in multiples of a prime number

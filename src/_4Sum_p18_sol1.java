@@ -62,6 +62,12 @@ public class _4Sum_p18_sol1 {
 	                if(hs.containsKey(target - sum)){
 	                    List<Pair> pairs = hs.get(target - sum);
 	                    for(Pair pair : pairs){
+	                    	
+	                    	/*From Java Doc
+	                    	 * This method also provides a convenient way to create a fixed-size list initialized to contain several elements:
+	                    	 * List<String> stooges = Arrays.asList("Larry", "Moe", "Curly");
+	                    	 */
+	                    	
 	                    	List<Integer> temp = Arrays.asList(nums[pair.left], nums[pair.right], nums[i], nums[j]);
 	                        
 	                        //if we havn't record this list before, then we found a new result!

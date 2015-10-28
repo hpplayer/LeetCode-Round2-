@@ -1,3 +1,9 @@
+/*
+Merge k Sorted Lists
+
+Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
+*/
+
 /**
  * Divide-and-Conquer, or we call it bottom-up merge sort
  * 
@@ -22,6 +28,7 @@ public class Merge_k_Sorted_Lists_p23_sol1 {
         
         //end > 0 means we have at least 2 elements in list, so we can merge them together
         while(end > 0){
+        	//each time we will squeeze half of the list to front 
             int start = 0;
             while(end > start){
                 //we will always update list's front part, and the last merged final list will be in lists[0]

@@ -29,7 +29,9 @@ If there are multiple such windows, you are guaranteed that there will always be
  * right bound - left bound + 1. Finally we will find the min bound and return the minWin accordingly.
  * 
  * Remark:
- * This problem is similar to problem:
+ * 1) Time complexity: O(n). We have two pointers that only move forward. Each of them can only move n steps in total. So it is O(n) time
+ * 
+ * 2) This problem is similar to problem:
  *  Longest_Substring_Without_Repeating_Characters_p3_sol1,
  *  Substring_with_Concatenation_of_All_Words_p30_sol1
  *  Longest_Substring_with_At_Most_Two_Distinct_Characters_p159_sol1
@@ -54,9 +56,14 @@ public class Minimum_Window_Substring_p76_sol1 {
         int count = 0;//how many chars in t we found so far
         
         for(int i = 0; i < s.length(); i++){
+        	//we are moving right boundary and searching for a char appeared in string t
             if(expect[s.charAt(i)] == 0) continue;
             
+            //we can't increase count for each new char, we only increase it when we need this new char
             if(expect[s.charAt(i)] > real[s.charAt(i)]) count ++;
+            	
+            //we use a lazy update here, we will move left bound of window only after we found all chars in t
+            //so current char may not necessary included in final window.
             real[s.charAt(i)] ++;
             
             //if we have found all chars in t, then we know remaining window will at least contains t

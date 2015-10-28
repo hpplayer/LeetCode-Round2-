@@ -30,6 +30,16 @@ The number of ways decoding "12" is 2.
  * since we only need three values for each digit: value from 1 step away, value from 2 steps away, result of current value which
  * will be updated as the value from 1 step away in next loop
  * 
+ * Explanation Update:
+ * 
+ * If current char is 0, it means, we cannot treat it as a single code, we must combine it with the value before it, so the num of ways to decode
+ * string from 0 to i will be the ways to decode substring from 0 to i - 2
+ * However if current char is any other char, then we can treat it as a single code, so at least we can have same ways to decode substring from 0 to i -1.
+ * If we got lucky, and this char can be combined with prev char to compose another valid number, then we will have extra ways to decode it (the ways
+ * to decode substring from 0 to i - 2).
+ * 
+ * Besides: be careful about the boundary case
+ * 
  * @author hpPlayer
  * @date Sep 19, 2015 7:06:12 PM
  */
