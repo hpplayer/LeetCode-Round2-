@@ -12,7 +12,7 @@ import java.util.*;
  *  Like recursion, we should let current node's parent node know we have reached bottom or found target node. When we are done 
  *  with subtrees, and reach the parent again, we have gathered information from its subtrees. We should have two results, left and right.
  *  Same to recursion, if left and right are all non-null nodes, then current node is LCA, we need return to its parent node and return
- *  this LCA. If we just found one node (this node may be the ancestor of another node), we will still tell its parent, ande let parent decide
+ *  this LCA. If we just found one node (this node may be the ancestor of another node), we will still tell its parent, and let parent decide
  *  LCA based on the status from the other subtree. To treat the root node as other nodes, we create a dummy node, so if root node is 
  *  LCA, then we could found it by looking at dummy node
  *  
@@ -58,25 +58,36 @@ public class Lowest_Common_Ancestor_of_a_Binary_Tree_p236_sol2 {
                 stack.pop();//we are done with this node, pop out
             }else if(!curr.visited){
                 //have not visited curr node, push right first then left
+            	//we push right first, left second to the stack, so left will pop first then right
+            	//and the order will follow the post-order traversal
                 curr.visited = true;
                 stack.push(new MyNode(node.right, curr));
                 stack.push(new MyNode(node.left, curr));
             }else if(curr.visited){
                 //if visited, update result
+            	//we only allowed to provide one node to parent node.
+            	//if left and right both not null, we provide current node
+            	//if left not null, return left, if right not null, return right
+            	//otherwise we return null
                 TreeNode left = curr.result.get(0);
                 TreeNode right = curr.result.get(1);
                 if(left != null && right != null){
                     parent.result.add(node);//curr treeNode is LCA
                 }else if(left != null){
                     parent.result.add(left);
-                }else{
+                }else if(right != null){
                     parent.result.add(right);
+                }else{
+                    parent.result.add(null);
                 }
                 
                 stack.pop();//we are done with this node, pop out
             }
         }
         
+        //since dummy node has only one subtree, which is our whole tree
+        //there will be only one node returned to dummy node, i.e. LCA from whole tree
+        //so we get it and return it as result
         return dummy.result.get(0);
         
     }

@@ -16,7 +16,8 @@ Merge k sorted linked lists and return it as one sorted list. Analyze and descri
  * my algorithm is more like brute force, like we will insert a new Node into previous sorted list, the worst time will be O(n^2)
  * However, merge sort will always try to merge two lists with similar size. So the time complexity is always O(nlogn)
  * 
- * This problem can also be solved by using a min-heap, and the solution is trivial, so I do no list it here.
+ * This problem can also be solved by using a min-heap(push the curr min node of each list to the que, and the solution is trivial,
+ * so I do no list it here.
  * 
  * @author hpPlayer
  * @date Sep 19, 2015 2:12:18 PM

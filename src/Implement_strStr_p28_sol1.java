@@ -18,9 +18,9 @@ public class Implement_strStr_p28_sol1 {
         for(int i = 0; ;i++){//we are confident the loop will end with break or return
         //inner loop is pointer in needle
             for(int j = 0; ; j++){
-                //found match
+                //check if j is valid (index in needle), report match if reach boundary
                 if(j == needle.length()) return i;
-                //reach haystack but still not found match
+                //check if i + j is valid (index in haystack), report -1 if reach boundary
                 if(i + j == haystack.length()) return -1;
                 
                 //when matching char in haystack and needle, we found an unmatched string, then we will
