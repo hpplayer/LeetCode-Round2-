@@ -68,18 +68,23 @@ public class Read_N_Characters_Given_Read4_II_Call_multiple_times_p158_sol1 {
         //stop when reach EOF or charRead == n
         while(!EOF && charRead < n){
             //firstly we need check if we have unread chars left from last read
+        	//~~~get how many chars we can get from input
             int size = buf2Size == 0? read4(buf2) : buf2Size;
+            
             //then we check if we reach EOF
             //In case we have reached EOF but we still have chars in buf2, we still cannot stop the loop
             //so we treat such case as non-EOF case
             if(buf2Size == 0 && size < 4) EOF = true;
             
             //check two boundary cases, put restriction on update if necessary
+            //~~~get how many chars can output 
             int realLength = Math.min(size, n - charRead);
             
             //we update buffer based on buf2Start so we can cover general cases and corner case where we
             //need to continue read chars from last stop spot
             for(int i = buf2Start; i < buf2Start + realLength; i++){
+            	//we can overwrite buf with different readN
+            	//In same read, we have to write on new cell
                 buf[charRead + i - buf2Start] = buf2[i];
             }
             

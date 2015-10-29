@@ -52,7 +52,7 @@ public class Insert_Interval_p57_sol1 {
         //merge all intervals that will be affected by the newInterval
         //we will update newInterval accordingly if affected intervals has a smaller start index or has
         //a larger index
-        while(i < intervals.size() && intervals.get(i).start <= newInterval.start){
+        while(i < intervals.size() && intervals.get(i).start <= newInterval.end){
             newInterval.start = Math.min(newInterval.start, intervals.get(i).start);
             newInterval.end = Math.max(newInterval.end, intervals.get(i).end);
             intervals.remove(i);//remove affected intervals due to merge completed
