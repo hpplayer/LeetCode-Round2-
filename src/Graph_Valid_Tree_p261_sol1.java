@@ -69,6 +69,8 @@ and thus will not appear together in edges.
  * 
  * So for this problem, sol1 is more recommended
  * 
+ * Problem Surrounded Regions (p130) can also be solved by UNION-FIND !
+ * 
  * @author hpPlayer
  * @date Oct 11, 2015 7:11:24 PM
  */

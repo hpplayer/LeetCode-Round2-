@@ -36,7 +36,16 @@ X O X X
  * 3) Besides, this problem can also be solved by union-find. Due to the time limit, I did not study the solution, I will update it later 
  * if I got time
  * 
- * This problem is similar to problem Number of Islands(p200)
+ * Sol1 provides a DFS solution
+ * Sol2 provides a union-find solution.
+ * 
+ * sol1 has time complexity of O(mn)
+ * sol2 has time complexity of O(mn * mn) (O(mn) to visit each cell, O(mn) to find the root)
+ * 
+ * so sol1 is more recommended, but sol2 also provides an interesting approach to solve this problem
+ * 
+ * Generally, this problem is similar to problem Number of Islands(p200)
+ * for sol2, Problem Graph Valid Tree (p130) can also be solved by union find, check it out!
  * 
  * @author hpPlayer
  * @date Oct 26, 2015 5:44:05 PM
