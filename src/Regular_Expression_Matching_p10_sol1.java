@@ -52,7 +52,7 @@ isMatch("aab", "c*a*b") ¡ú true
  */
 public class Regular_Expression_Matching_p10_sol1 {
 	public static void main(String[] args){
-		System.out.println(new Regular_Expression_Matching_p10_sol1().isMatch("", "."));
+		System.out.println(new Regular_Expression_Matching_p10_sol1().isMatch("aa", "*a"));
 	}
 	
     public boolean isMatch(String s, String p) {

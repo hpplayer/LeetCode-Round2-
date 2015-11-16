@@ -16,6 +16,9 @@ import java.util.*;
  * 
  * For the boundary of k, we simply use the technique in problem Contains Duplicate II (p219) as sliding win.
  * 
+ * Remark:
+ * we use val/(t + 1) to get the bucket No. But we may have the case that t > Integer.MAX_VALUE, so we need casse (t+1) as well
+ * 
  * @author hpPlayer
  * @date Oct 2, 2015 3:16:04 AM
  */

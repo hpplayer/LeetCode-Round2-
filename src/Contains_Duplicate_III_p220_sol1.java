@@ -54,10 +54,10 @@ public class Contains_Duplicate_III_p220_sol1 {
             
             //create a long for nums[i] to avoid overflow
             long val = (long) nums[i];
-            //floor will return the floor number of nums[i], it none return, return NULL
+            //floor will return the floor number of nums[i], if none return, return NULL
             //if it contains the duplicate of input, then return duplicate
             Integer floor = hs.floor(nums[i]);
-            //Ceiling will return the Ceiling number of nums[i], it none return, return NULL
+            //Ceiling will return the Ceiling number of nums[i], if none return, return NULL
             //if it contains the duplicate of input, then return duplicate            
             Integer ceil = hs.ceiling(nums[i]);
             

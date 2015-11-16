@@ -46,6 +46,13 @@ All words contain only lowercase alphabetic characters.
 
 public class Word_Ladder_II_p126_sol1 {	
 	public static void main(String[] args){
+		
+		String start = "hot";
+		String end = "dog";
+		
+		Set<String> hs = new HashSet<String>(Arrays.asList(new String[]{"hot","cog","dog","tot","hog","hop","pot","dot"}));
+		System.out.println( new Word_Ladder_II_p126_sol1().findLadders(start, end, hs));
+		/*
 		String begin = "hit";
 		String end = "cog";
 		
@@ -57,7 +64,8 @@ public class Word_Ladder_II_p126_sol1 {
 		set.add("log");
 
 		Word_Ladder_II_p126_sol1 sol = new Word_Ladder_II_p126_sol1();
-		System.out.println( sol.findLadders(begin, end, set));
+		
+		*/
 	}
 	
     public List<List<String>> findLadders(String beginWord, String endWord, Set<String> wordList) {
@@ -92,7 +100,6 @@ public class Word_Ladder_II_p126_sol1 {
     boolean connected;
     
     public void BFS(Set<String> forward, Set<String> backward, Set<String> set, boolean swap, Map<String, List<String>> hs){
-
         //boundary check
         if(forward.isEmpty() || backward.isEmpty()) return;
         

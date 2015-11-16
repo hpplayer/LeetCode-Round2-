@@ -59,7 +59,7 @@ public class Sliding_Window_Maximum_p239_sol1 {
     public int[] maxSlidingWindow(int[] nums, int k) {
         int[] result = new int[nums.length - k + 1];
         
-        if(nums.length == 0) return result;
+        if(nums.length == 0) return new int[]{};
         
         Deque<Integer> deq= new LinkedList<Integer>();
         
